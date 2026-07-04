@@ -30,6 +30,15 @@ function updateNavState() {
 window.addEventListener("scroll", updateNavState, { passive: true });
 updateNavState();
 
+// GA4 event tracking on key CTAs
+document.querySelectorAll("[data-ga-event]").forEach((el) => {
+  el.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", el.dataset.gaEvent, { event_label: el.dataset.gaLabel });
+    }
+  });
+});
+
 // FAQ accordion
 document.querySelectorAll(".faq-question").forEach((btn) => {
   btn.addEventListener("click", () => {
