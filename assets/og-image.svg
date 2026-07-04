@@ -1,14 +1,12 @@
 <svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="630" fill="#101728"/>
-  <g transform="translate(387, 300)">
-    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="#ffffff">Sea</text>
-    <g transform="translate(113.9, 0)">
-      <rect x="10" y="-46" width="8" height="46" fill="#ffffff"/>
-      <rect x="0" y="-34" width="28" height="8" fill="#ffffff"/>
-    </g>
-    <text x="141.9" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="#ffffff">ed</text>
-    <text x="234.4" y="0" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="#2563eb">Digital</text>
+  <g fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="translate(478, 155)">
+    <path d="M22 12 V70"/>
+    <path d="M22 46 H80 V70"/>
   </g>
+  <text x="600" y="330" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" text-anchor="middle">
+    <tspan fill="#ffffff">Seated</tspan><tspan fill="#2563eb">Digital</tspan>
+  </text>
   <text x="600" y="380" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#9aa3b2" text-anchor="middle">
     Websites &amp; Online Ordering for Restaurants
   </text>
