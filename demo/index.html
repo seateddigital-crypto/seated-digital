@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copper Fork — Order Online</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="demo-banner">Demo site built by <strong>Seated Digital</strong> — this is what your ordering page could look like.</div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <span class="logo">Copper Fork</span>
+    <nav>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Copper Fork</h1>
+    <p>Wood-fired comfort food, made fresh. Order online for pickup or delivery.</p>
+    <a href="#category-nav" class="btn btn-primary">Order Now</a>
+  </div>
+</section>
+
+<nav class="category-nav" id="category-nav">
+  <div class="category-nav-inner" id="category-pills">
+    <button class="pill active" data-target="starters">Starters</button>
+    <button class="pill" data-target="salads">Salads</button>
+    <button class="pill" data-target="mains">Mains</button>
+    <button class="pill" data-target="drinks">Drinks</button>
+    <button class="pill" data-target="desserts">Desserts</button>
+  </div>
+</nav>
+
+<section class="menu">
+  <div class="section-inner">
+
+    <div class="category" id="starters">
+      <h2>Starters</h2>
+      <div class="items" data-items="starters"></div>
+    </div>
+
+    <div class="category" id="salads">
+      <h2>Salads</h2>
+      <div class="items" data-items="salads"></div>
+    </div>
+
+    <div class="category" id="mains">
+      <h2>Mains</h2>
+      <div class="items" data-items="mains"></div>
+    </div>
+
+    <div class="category" id="drinks">
+      <h2>Drinks</h2>
+      <div class="items" data-items="drinks"></div>
+    </div>
+
+    <div class="category" id="desserts">
+      <h2>Desserts</h2>
+      <div class="items" data-items="desserts"></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="section-inner hours-inner">
+    <div>
+      <h2>Hours</h2>
+      <p>Mon–Thu: 11am – 9pm<br>Fri–Sat: 11am – 10pm<br>Sun: 12pm – 8pm</p>
+    </div>
+    <div>
+      <h2>Location</h2>
+      <p>412 Elm Street<br>Riverton, OH 43210<br>(555) 019-2837</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="section-inner footer-inner">
+    <span>Copper Fork — demo site</span>
+    <span>Built by Seated Digital</span>
+  </div>
+</footer>
+
+<div class="cart" id="cart">
+  <div class="cart-header" id="cart-toggle">
+    <span>🛒 Your Order</span>
+    <span id="cart-count">0 items</span>
+  </div>
+  <div class="cart-body" id="cart-body">
+    <p class="cart-empty" id="cart-empty">No items yet — add something from the menu.</p>
+    <div id="cart-items"></div>
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cart-total">$0.00</span>
+    </div>
+    <button class="btn btn-primary cart-checkout" id="checkout-btn">Checkout</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <h2>Almost done!</h2>
+    <p class="modal-sub">This is a demo — no real order will be placed.</p>
+    <form id="checkout-form">
+      <label>Name
+        <input type="text" required>
+      </label>
+      <label>Phone
+        <input type="tel" required>
+      </label>
+      <div class="fulfillment">
+        <label class="radio"><input type="radio" name="fulfillment" value="pickup" checked> Pickup</label>
+        <label class="radio"><input type="radio" name="fulfillment" value="delivery"> Delivery</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Place Demo Order</button>
+      <button type="button" class="btn btn-outline" id="modal-close">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
