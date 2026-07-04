@@ -408,6 +408,10 @@ input:focus, textarea:focus {
 .legal p { font-size: 1rem; }
 
 @media (max-width: 720px) {
+  .nav-inner { padding: 14px 20px; }
+  .nav-inner a.logo { font-size: 1rem; gap: 6px; }
+  .logo-icon { width: 18px; height: 18px; }
+  .nav-cta { padding: 8px 14px; font-size: 0.85rem; }
   .nav nav { gap: 14px; }
   .nav nav a:not(.nav-cta) { display: none; }
   .form-row { grid-template-columns: 1fr; }
