@@ -175,6 +175,7 @@ p { margin: 0 0 1em; color: var(--muted); }
 
 /* Cart */
 .cart {
+  display: none;
   position: fixed;
   bottom: 0;
   right: 24px;
@@ -185,6 +186,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   box-shadow: 0 -6px 24px rgba(0,0,0,0.08);
   z-index: 20;
 }
+.cart.has-items { display: block; }
 .cart-header {
   display: flex;
   justify-content: space-between;

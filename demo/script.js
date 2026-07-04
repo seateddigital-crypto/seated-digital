@@ -98,10 +98,13 @@ function removeFromCart(id) {
 
 function renderCart() {
   const ids = Object.keys(cart);
+  const cartEl = document.getElementById("cart");
   const itemsEl = document.getElementById("cart-items");
   const emptyEl = document.getElementById("cart-empty");
   const countEl = document.getElementById("cart-count");
   const totalEl = document.getElementById("cart-total");
+
+  cartEl.classList.toggle("has-items", ids.length > 0);
 
   const count = ids.reduce((sum, id) => sum + cart[id], 0);
   countEl.textContent = `${count} item${count === 1 ? "" : "s"}`;
