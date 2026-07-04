@@ -29,3 +29,27 @@ function updateNavState() {
 
 window.addEventListener("scroll", updateNavState, { passive: true });
 updateNavState();
+
+// Hero: crossfade background photos as the user scrolls through the pinned hero
+const heroScroll = document.querySelector(".hero-scroll");
+const heroLayers = document.querySelectorAll(".hero-bg-layer");
+
+function updateHeroBg() {
+  if (!heroScroll || heroLayers.length === 0) return;
+  const rect = heroScroll.getBoundingClientRect();
+  const scrollableDistance = heroScroll.offsetHeight - window.innerHeight;
+  if (scrollableDistance <= 0) return;
+
+  const scrolled = -rect.top;
+  const progress = Math.min(Math.max(scrolled / scrollableDistance, 0), 1);
+  const activeIndex = Math.min(
+    heroLayers.length - 1,
+    Math.floor(progress * heroLayers.length)
+  );
+
+  heroLayers.forEach((layer, i) => layer.classList.toggle("active", i === activeIndex));
+}
+
+window.addEventListener("scroll", updateHeroBg, { passive: true });
+window.addEventListener("resize", updateHeroBg);
+updateHeroBg();
