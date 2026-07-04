@@ -113,6 +113,14 @@ a { color: inherit; }
 }
 .card h3 { color: var(--amber-dark); }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* How it works */
 .how { padding: 70px 0; background: white; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .steps { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 28px; }

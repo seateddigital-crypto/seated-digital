@@ -105,7 +105,9 @@
   <div class="section-inner contact-inner">
     <h2>Get a free quote</h2>
     <p>Tell me a bit about your restaurant and I'll follow up with a plan and price.</p>
-    <form action="mailto:seateddigital@gmail.com" method="post" enctype="text/plain">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="visually-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
       <div class="form-row">
         <label>Your name
           <input type="text" name="name" required>
