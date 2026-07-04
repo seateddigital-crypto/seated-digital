@@ -30,18 +30,17 @@ function updateNavState() {
 window.addEventListener("scroll", updateNavState, { passive: true });
 updateNavState();
 
-// Hero: crossfade background photos as the user scrolls through the pinned hero
+// Hero: crossfade background photos as the hero scrolls past (no pinning)
 const heroScroll = document.querySelector(".hero-scroll");
 const heroLayers = document.querySelectorAll(".hero-bg-layer");
 
 function updateHeroBg() {
   if (!heroScroll || heroLayers.length === 0) return;
   const rect = heroScroll.getBoundingClientRect();
-  const scrollableDistance = heroScroll.offsetHeight - window.innerHeight;
-  if (scrollableDistance <= 0) return;
+  const heroHeight = heroScroll.offsetHeight;
+  if (heroHeight <= 0) return;
 
-  const scrolled = -rect.top;
-  const progress = Math.min(Math.max(scrolled / scrollableDistance, 0), 1);
+  const progress = Math.min(Math.max(-rect.top / heroHeight, 0), 1);
   const activeIndex = Math.min(
     heroLayers.length - 1,
     Math.floor(progress * heroLayers.length)

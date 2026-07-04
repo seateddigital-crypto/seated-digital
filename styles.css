@@ -107,15 +107,14 @@ a { color: inherit; }
   box-shadow: 0 8px 20px rgba(255, 61, 104, 0.35);
 }
 
-/* Hero: pinned scroll-driven photo crossfade */
+/* Hero: photo crossfade tied to scroll, no pinning/sticking */
 .hero-scroll {
   position: relative;
-  height: 260vh;
+  height: 100vh;
 }
 .hero-pin {
-  position: sticky;
-  top: 0;
-  height: 100vh;
+  position: relative;
+  height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
